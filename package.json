@@ -1,0 +1,51 @@
+{
+  "name": "mobile.de-api",
+  "version": "0.1.0",
+  "description": "Node.js promise based wrapper over mobile.de API.",
+  "keywords": [
+    "mobile.de",
+    "api",
+    "wrapper",
+    "async",
+    "promise"
+  ],
+  "maintainers": [
+    {
+      "name": "Ondřej Plšek",
+      "email": "plsek.o@gmail.com",
+      "url": "http://ondraplsek.cz/"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/ondrs/node-mobile.de-api/blob/master/LICENSE.md"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ondrs/mobile.de-api.git"
+  },
+  "dependencies": {
+    "krawler": "~0.3.0",
+    "q": "~1.0.0",
+    "underscore": "~1.6.0",
+    "request": "~2.36.0",
+    "xmlbuilder": "~2.2.1",
+    "xml2js": "~0.4.4",
+    "mime": "~1.2.11"
+  },
+  "devDependencies": {
+    "chai": "~1.9.0"
+  },
+  "scripts": {
+    "test": "mocha test/index"
+  },
+  "engines": [
+    "node >=0.8.x"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "main": "./lib/index"
+}

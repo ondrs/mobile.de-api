@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://services.mobile.de/schema/seller/seller-ad-1.1"
+    xmlns:vehicle="http://services.mobile.de/schema/seller/vehicle-1.0"
+    xmlns:site-specifics="http://services.mobile.de/schema/seller/site-specifics-1.0"
+    xmlns:price="http://services.mobile.de/schema/seller/price-1.0"
+    xsi:schemaLocation="http://services.mobile.de/schema/seller/seller-ad-1.1 http://services.mobile.de/schema/seller/seller-ad-1.1.xsd
+http://services.mobile.de/schema/seller/seller-ad-1.1 ">
+    <seller-inventory-key value="fooBar42"/>
+    <description>This is really a nice car. The only strange thing is that so called flux capacitor that it is equipped
+        with. The previous owner told me that he took it from an old DeLorean. No idea what it is good for.
+    </description>
+    <mobile-features>
+        <feature>EYE_CATCHER</feature>
+        <feature>PAGE_ONE_AD</feature>
+        <feature>TOP_OF_PAGE</feature>
+    </mobile-features>
+    <vehicle:vehicle>
+        <vehicle:classification>
+            <vehicle:vehicle-class key="Car"/>
+            <vehicle:category key="Cabrio"/>
+            <vehicle:make key="PORSCHE"/>
+            <vehicle:model key="993"/>
+        </vehicle:classification>
+        <vehicle:model-description value="993 coupe Carrera 4"/>
+        <vehicle:damage-and-unrepaired value="false"/>
+        <vehicle:accident-damaged value="false"/>
+        <vehicle:roadworthy value="true"/>
+        <vehicle:features>
+            <vehicle:feature key="ALLOY_WHEELS"/>
+            <vehicle:feature key="ELECTRIC_WINDOWS"/>
+            <vehicle:feature key="IMMOBILIZER"/>
+            <vehicle:feature key="ABS"/>
+            <vehicle:feature key="ESP"/>
+            <vehicle:feature key="HU_AU_NEU"/>
+        </vehicle:features>
+        <vehicle:specifics>
+            <vehicle:exterior-color key="">
+                <vehicle:metallic value="false"/>
+                <vehicle:manufacturer-color-name value="Kuntergraudunkelbunt"/>
+            </vehicle:exterior-color>
+            <vehicle:mileage value="142000"/>
+            <vehicle:door-count key="TWO_OR_THREE"/>
+            <vehicle:fuel key="PETROL"/>
+            <vehicle:power value="210"/>
+            <vehicle:gearbox key="MANUAL_GEAR"/>
+            <vehicle:construction-date value="1997-04-12"/>
+            <vehicle:cubic-capacity value="3600"/>
+            <vehicle:condition key="USED"/>
+            <vehicle:number-of-previous-owners value="1"/>
+            <vehicle:parking-assistants>
+                <vehicle:parking-assistant key="FRONT_SENSORS"/>
+                <vehicle:parking-assistant key="REAR_SENSORS"/>
+            </vehicle:parking-assistants>
+        </vehicle:specifics>
+        <vehicle:site-specifics>
+            <site-specifics:first-registration value="1997-09"/>
+        </vehicle:site-specifics>
+    </vehicle:vehicle>
+    <price:price type="FIXED" currency="EUR">
+        <price:gross-prices>
+            <price:consumer-price-amount value="32000"/>
+        </price:gross-prices>
+    </price:price>
+</ad>
