@@ -10,16 +10,18 @@ module.exports = {
   ],
   'vehicle:vehicle': {
     'vehicle:classification': {
-      '@key': 'Car'
-    },
-    'vehicle:category': {
-      '@key': 'Cabrio'
-    },
-    'vehicle:make': {
-      '@key': 'PORSCHE'
-    },
-    'vehicle:model': {
-      '@key': '993'
+      'vehicle:vehicle-class': {
+        '@key': 'Car'
+      },
+      'vehicle:category': {
+        '@key': 'Cabrio'
+      },
+      'vehicle:make': {
+        '@key': 'PORSCHE'
+      },
+      'vehicle:model': {
+        '@key': '993'
+      }
     },
     'vehicle:model-description': {
       '@value': '993 coupe Carrera 4'
@@ -34,27 +36,37 @@ module.exports = {
       '@value': true
     },
     'vehicle:features': [
-      {'vehicle:feature': {'@value': 'ELECTRIC_WINDOWS'} },
-      {'vehicle:feature': {'@value': 'IMMOBILIZER'} },
-      {'vehicle:feature': {'@value': 'ABS'} },
-      {'vehicle:feature': {'@value': 'ESP'} },
-      {'vehicle:feature': {'@value': 'HU_AU_NEU'} }
+      {'vehicle:feature': {'@key': 'ALLOY_WHEELS'} },
+      {'vehicle:feature': {'@key': 'ELECTRIC_WINDOWS'} },
+      {'vehicle:feature': {'@key': 'IMMOBILIZER'} },
+      {'vehicle:feature': {'@key': 'ABS'} },
+      {'vehicle:feature': {'@key': 'ESP'} },
+      {'vehicle:feature': {'@key': 'HU_AU_NEU'} }
     ],
     'vehicle:specifics': {
+      'vehicle:exterior-color': {
+        '@key': '',
+        'vehicle:metallic': {
+          '@value': false
+        },
+        'vehicle:manufacturer-color-name': {
+          '@value': 'Kuntergraudunkelbunt'
+        }
+      },
       'vehicle:mileage': {
         '@value': 142000
       },
       'vehicle:door-count': {
-        '@value': 'TWO_OR_THREE'
+        '@key': 'TWO_OR_THREE'
       },
       'vehicle:fuel': {
-        '@value': 'PETROL'
+        '@key': 'PETROL'
       },
       'vehicle:power': {
         '@value': 210
       },
       'vehicle:gearbox': {
-        '@value': 'MANUAL_GEAR'
+        '@key': 'MANUAL_GEAR'
       },
       'vehicle:construction-date': {
         '@value': '1997-04-12'
@@ -63,7 +75,7 @@ module.exports = {
         '@value': 3600
       },
       'vehicle:condition': {
-        '@value': 'USED'
+        '@key': 'USED'
       },
       'vehicle:number-of-previous-owners': {
         '@value': 1

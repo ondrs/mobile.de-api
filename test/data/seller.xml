@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seller
+        xmlns="http://services.mobile.de/schema/common/seller-2.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://services.mobile.de/schema/common/seller-2.0 http://services.mobile.de/schema/common/seller-2.0.xsd"
+
+        phone-number-invisible="false"
+        name-invisible="true"
+        site-id="GERMANY"
+        type="FOR_SALE_BY_OWNER"
+        >
+
+    <location-contact
+            email="max@mustermann.de.invalid"
+            salutation="MALE"
+            first-name="Max"
+            last-name="Mustermann"
+            >
+        <address
+                house-number="77"
+                street="Potsdamer Chaussee"
+                city="Berlin"
+                zip-code="14129"
+                country-code="DE"
+                />
+        <phone
+                number="12345678"
+                area-code="030"
+                country-calling-code="49"
+                type="FIXED"
+                />
+    </location-contact>
+
+</seller>

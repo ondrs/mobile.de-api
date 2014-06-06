@@ -4,12 +4,9 @@
     xmlns:vehicle="http://services.mobile.de/schema/seller/vehicle-1.0"
     xmlns:site-specifics="http://services.mobile.de/schema/seller/site-specifics-1.0"
     xmlns:price="http://services.mobile.de/schema/seller/price-1.0"
-    xsi:schemaLocation="http://services.mobile.de/schema/seller/seller-ad-1.1 http://services.mobile.de/schema/seller/seller-ad-1.1.xsd
-http://services.mobile.de/schema/seller/seller-ad-1.1 ">
+    xsi:schemaLocation="http://services.mobile.de/schema/seller/seller-ad-1.1 http://services.mobile.de/schema/seller/seller-ad-1.1.xsd">
     <seller-inventory-key value="fooBar42"/>
-    <description>This is really a nice car. The only strange thing is that so called flux capacitor that it is equipped
-        with. The previous owner told me that he took it from an old DeLorean. No idea what it is good for.
-    </description>
+    <description>This is really a nice car. The only strange thing is that so called flux capacitor that it is equipped with. The previous owner told me that he took it from an old DeLorean. No idea what it is good for.</description>
     <mobile-features>
         <feature>EYE_CATCHER</feature>
         <feature>PAGE_ONE_AD</feature>

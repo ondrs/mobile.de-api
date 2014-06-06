@@ -1,6 +1,7 @@
 var MobileApi = require(__dirname + '/../lib/index'),
   Mapper = require(__dirname + '/../lib/mapper'),
   expect = require('chai').expect,
+  parseString = require('xml2js').parseString,
   fs = require('fs');
 
 
@@ -165,12 +166,59 @@ describe('Mobile.de API tests', function () {
 
 describe('Mapper tests', function() {
 
-  var ad = require(__dirname + '/data/ad.js');
+  it('should map vehicle ad to an xml', function(done) {
+    var ad = require(__dirname + '/data/ad.js'),
+      xml1 = Mapper.vehicleToXml(ad),
+      xml2 = fs.readFileSync(__dirname + '/data/ad.xml', 'utf8'),
+      opts = {trim: true};
 
-  it('should map object to an xml', function() {
-    var xml = Mapper.toXml(ad);
-    console.log(xml);
-    expect(xml).to.be.a('string');
+    parseString(xml1, opts, function (err, obj1) {
+
+      if(err) {
+        done(err);
+        return;
+      }
+
+      parseString(xml2, opts, function (err, obj2) {
+
+        if(err) {
+          done(err);
+          return;
+        }
+
+        expect(obj1).to.eql(obj2);
+        done();
+      });
+    });
   });
+
+
+
+  it('should map seller to an xml', function(done) {
+    var seller = require(__dirname + '/data/seller.js'),
+      xml1 = Mapper.sellerToXml(seller),
+      xml2 = fs.readFileSync(__dirname + '/data/seller.xml', 'utf8'),
+      opts = {trim: true};
+
+    parseString(xml1, opts, function (err, obj1) {
+
+      if(err) {
+        done(err);
+        return;
+      }
+
+      parseString(xml2, opts, function (err, obj2) {
+
+        if(err) {
+          done(err);
+          return;
+        }
+
+        expect(obj1).to.eql(obj2);
+        done();
+      });
+    });
+  });
+
 
 });
