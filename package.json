@@ -1,6 +1,6 @@
 {
   "name": "mobile.de-api",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Node.js promise based wrapper over mobile.de API.",
   "keywords": [
     "mobile.de",

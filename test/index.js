@@ -12,7 +12,7 @@ var token = 'E3arEATxgnGlA3GH5LNync1mh38GSS0QnChDB3W82Uq9nSfdjVeh4XC62IHJ77f55i2
   sellerKey = 167;
 
 
-var api = new MobileApi(token, url);
+var api = new MobileApi(token, sellerKey, url);
 
 describe('Mobile.de API tests', function () {
 
@@ -30,10 +30,10 @@ describe('Mobile.de API tests', function () {
   });
 
 
-  it('should fetch single seller', function (done) {
+  it('should retrieve current seller', function (done) {
 
     api
-      .retrieveSellers(sellerKey)
+      .retrieveCurrentSeller()
       .then(function (result) {
         expect(result).to.be.an('object');
         done();
@@ -46,7 +46,7 @@ describe('Mobile.de API tests', function () {
   it('should retrieve list of ads', function (done) {
 
     api
-      .retrieveAds(sellerKey)
+      .retrieveAds()
       .then(function (result) {
         expect(result).to.be.an('Array');
         done();
@@ -61,12 +61,12 @@ describe('Mobile.de API tests', function () {
     var adId;
     this.timeout(10000);
 
-    beforeEach(function (done) {
+    before(function (done) {
 
       var xml = fs.readFileSync(__dirname + '/data/ad.xml', 'utf8');
 
       api
-        .createAd(sellerKey, xml)
+        .createAd(xml)
         .then(function (result) {
           adId = result;
           done();
@@ -75,10 +75,10 @@ describe('Mobile.de API tests', function () {
         });
     });
 
-    afterEach(function (done) {
+    after(function (done) {
 
       api
-        .deleteAd(sellerKey, adId)
+        .deleteAd(adId)
         .then(function (result) {
           done();
         }, function (err) {
@@ -90,7 +90,7 @@ describe('Mobile.de API tests', function () {
     it('should get a single ad', function (done) {
 
       api
-        .retrieveAds(sellerKey, adId)
+        .retrieveAds(adId)
         .then(function (result) {
           expect(result).to.be.an('object');
           done();
@@ -105,7 +105,7 @@ describe('Mobile.de API tests', function () {
       var xml = fs.readFileSync(__dirname + '/data/ad.xml', 'utf8');
 
       api
-        .updateAd(sellerKey, adId, xml)
+        .updateAd(adId, xml)
         .then(function (result) {
           done();
         }, function (err) {
@@ -123,7 +123,7 @@ describe('Mobile.de API tests', function () {
       ];
 
       api
-        .uploadImages(sellerKey, adId, images)
+        .uploadImages(adId, images)
         .then(function (result) {
           done();
         }, function (err) {
@@ -135,7 +135,7 @@ describe('Mobile.de API tests', function () {
     it('should get images urls', function (done) {
 
       api
-        .getAllImagesUrls(sellerKey, adId)
+        .getAllImagesUrls(adId)
         .then(function (result) {
           expect(result).to.be.an('Array');
           done();
@@ -148,7 +148,7 @@ describe('Mobile.de API tests', function () {
     it('should delete all images', function (done) {
 
       api
-        .deleteAllImages(sellerKey, adId)
+        .deleteAllImages(adId)
         .then(function (result) {
           done();
         }, function (err) {
