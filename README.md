@@ -12,8 +12,9 @@ npm install mobile.de-api
 ```javascript
 var MobileApi = require('Mobile.de-api')
 
-var token = '****';
+var token = '****',
+    sellerKey = 123;
 
-var api = new MobileApi(token);
+var api = new MobileApi(token, sellerKey);
 ```
 

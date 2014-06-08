@@ -114,7 +114,7 @@ describe('Mobile.de API tests', function () {
     });
 
 
-    it('should upload images', function (done) {
+    it.skip('should upload images', function (done) {
 
       var images = [
         __dirname + '/data/1.jpg',
