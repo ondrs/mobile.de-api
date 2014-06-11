@@ -10,7 +10,9 @@ npm install mobile.de-api
 ## Setup
 
 ```javascript
-var MobileApi = require('Mobile.de-api')
+var Mobile = require('mobile.de-api'),
+  MobileApi = Mobile.Api,
+  Mapper = Mobile.Mapper,
 
 var token = '****',
     sellerKey = 123;

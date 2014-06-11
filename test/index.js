@@ -1,5 +1,6 @@
-var MobileApi = require(__dirname + '/../lib/index'),
-  Mapper = require(__dirname + '/../lib/mapper'),
+var Mobile = require(__dirname + '/../lib/index'),
+  MobileApi = Mobile.Api,
+  Mapper = Mobile.Mapper,
   expect = require('chai').expect,
   parseString = require('xml2js').parseString,
   fs = require('fs');
